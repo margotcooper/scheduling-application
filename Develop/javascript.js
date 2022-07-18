@@ -1,7 +1,7 @@
 var topDate = (document.getElementById("currentDay").value =
   moment().format("dddd, MMM Do"));
 var 
-currentDay.text('moment().format("dddd, MMM Do")');
+currentDay.text = ('moment().format("dddd, MMM Do")');
 
 //to add button to pop up form and to add button to submit form to schedule
 alertButtonEl.on('click', function () {
