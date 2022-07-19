@@ -1,7 +1,19 @@
 document.getElementById("currentDay").textContent =
   moment().format("dddd, MMM Do");
 
-// currentDay.textContent = moment().format("dddd, MMM Do");
+// another way of doing the above: currentDay.textContent = moment().format("dddd, MMM Do");
+
+var saveBtn = $(".saveBtn");
+$(saveBtn).on("click", save);
+function save() {
+  console.log($(this).attr("id"));
+}
+
+//'this' refers to self of what you are accessing. this=self of whatever element clicked. same in vanilla JS and jQuery.
+//when page refreshes, all values should still exist.
+//change above to save whatever is entered in textbox using jQuery
+//in activities for this week, solved version of activity 2, can see how jQuery handles elements
+//want to get value from the child that is the textbox, can use jQuery
 
 //to add button to pop up form and to add button to submit form to schedule
 // alertButtonEl.on("click", function () {
@@ -29,3 +41,7 @@ document.getElementById("currentDay").textContent =
 //can add class in between click and function.
 //const buttonThatWasClicked = $(event.target);
 //buttonThatWasClicked.parent('li').remove();
+
+//has to allow user to type into textbox, save into local storage, when page loads, put that info into textboxes, and change colors of hours based on when page loads
+//add event listener on save button.
+//activity 3 adds event listeners.

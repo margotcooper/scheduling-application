@@ -30,28 +30,27 @@
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
-      <form id="hourContainer">
-        <div class="row">
-          <div class="col hour">9 AM</div>
-          <div class="col-9 description">2 of 3 (wider)</div>
-          <div class="col saveBtn">
-            <img
-              src="./Develop/save-button-transparent20.png"
-              alt="Save Button"
-            />
-          </div>
+
+      <div class="row time-block">
+        <div class="col hour">9 AM</div>
+        <textarea class="col-9 description"></textarea>
+        <div class="col center saveBtn" id="9">
+          <img
+            src="./Develop/save-button-transparent20.png"
+            alt="Save Button"
+          />
         </div>
-        <div class="row">
-          <div class="col hour">10 AM</div>
-          <div class="col-9 description">2 of 3 (wider)</div>
-          <div class="col saveBtn"></div>
-        </div>
-        <div class="row">
-          <div class="col hour">11 AM</div>
-          <div class="col-9 description">2 of 3 (wider)</div>
-          <div class="col saveBtn"></div>
-        </div>
-      </form>
+      </div>
+      <div class="row time-block">
+        <div class="col hour">10 AM</div>
+        <textarea class="col-9 description"></textarea>
+        <div class="col saveBtn" id="10"></div>
+      </div>
+      <div class="row time-block">
+        <div class="col hour">11 AM</div>
+        <textarea class="col-9 description"></textarea>
+        <div class="col saveBtn" id="11"></div>
+      </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
