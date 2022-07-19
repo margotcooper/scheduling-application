@@ -1,21 +1,19 @@
-var topDate = (document.getElementById("currentDay").value =
-  moment().format("dddd, MMM Do"));
-var 
-currentDay.text = ('moment().format("dddd, MMM Do")');
+document.getElementById("currentDay").textContent =
+  moment().format("dddd, MMM Do");
+
+// currentDay.textContent = moment().format("dddd, MMM Do");
 
 //to add button to pop up form and to add button to submit form to schedule
-alertButtonEl.on('click', function () {
-    alert('Hello World');
-});
+// alertButtonEl.on("click", function () {
+//   alert("Hello World");
+// });
 //see activity 4 on html to add buttons
-
 
 //see activities 5 & 6 on how to add a form element
 //put button inside of 'form' in html or formEl.on('submit', handleFormSubmit); does not work
 //append the input to the document.
 //prevent default - stops clearing of the form.
 //adding classes to ul children - lis, activity 7, can add multiple classes with space in between. activity 8 shows how to change style as well.
-
 
 //event delegation activities 9 & 10
 //activity 9
@@ -31,4 +29,3 @@ alertButtonEl.on('click', function () {
 //can add class in between click and function.
 //const buttonThatWasClicked = $(event.target);
 //buttonThatWasClicked.parent('li').remove();
-
