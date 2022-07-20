@@ -11,6 +11,8 @@ function save() {
 
 //'this' refers to self of what you are accessing. this=self of whatever element clicked. same in vanilla JS and jQuery.
 //when page refreshes, all values should still exist.
+//iterate over list, for loop, check if id for that block is < current hour in the past, > current hour in the future, and 'else' is present. (activities 1 and 2)
+//can set interval timer to rerun function that runs loop to see what part of the hour it is.
 //change above to save whatever is entered in textbox using jQuery
 //in activities for this week, solved version of activity 2, can see how jQuery handles elements
 //want to get value from the child that is the textbox, can use jQuery
