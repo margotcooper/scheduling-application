@@ -5,8 +5,41 @@ document.getElementById("currentDay").textContent =
 
 var saveBtn = $(".saveBtn");
 $(saveBtn).on("click", save);
+
 function save() {
-  console.log($(this).attr("id"));
+  var localStorageKey = $(this).attr("id");
+  var userValue = $(this).prev().val();
+
+  localStorage.setItem(localStorageKey, userValue);
+  //Differences between vanilla and Jquery javascript
+  // var newEl = document.createElement("a");
+  // newEl.setAttribute("href", "https://www.google.com");
+  // newEl.textContent = "This way to google";
+  // console.log(newEl);
+  // var queryEl = $("<a>")
+  //   .attr("href", "https://www.google.com")
+  //   .text("This way to google");
+  // console.log(queryEl);
+
+  // document.getElementById("test").appendChild(newEl);
+  // $("#test").append(queryEl);
+}
+
+var currentHour = moment().format("HH");
+var textAreaArr = document.getElementsByTagName("textarea");
+
+for (i = 0; i < textAreaArr.length; i++) {
+  var rowBeingChecked = textAreaArr[i].dataset.time;
+
+  if (parseInt(rowBeingChecked) < parseInt(currentHour)) {
+    textAreaArr[i].setAttribute("class", "past col-9 description");
+  } else if (parseInt(rowBeingChecked) == parseInt(currentHour)) {
+    textAreaArr[i].setAttribute("class", "present col-9 description");
+  } else {
+    textAreaArr[i].setAttribute("class", "future col-9 description");
+  }
+
+  textAreaArr[i].value = localStorage.getItem(rowBeingChecked);
 }
 
 //'this' refers to self of what you are accessing. this=self of whatever element clicked. same in vanilla JS and jQuery.
